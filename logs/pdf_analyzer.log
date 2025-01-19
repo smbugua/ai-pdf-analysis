@@ -181,3 +181,372 @@ KeyError: 'summary'
 2025-01-19 17:13:38,396 - pdf_analyzer - DEBUG - [app.py:161] - JSON analysis saved to: outputs/Mapsiot_Contract__analysis.json
 2025-01-19 17:13:38,396 - pdf_analyzer - DEBUG - [app.py:172] - Cleaned up uploaded file: uploads/Mapsiot_Contract_.pdf
 2025-01-19 17:13:38,396 - pdf_analyzer - INFO - [app.py:174] - Successfully analyzed PDF: Mapsiot_Contract_.pdf
+2025-01-19 18:41:44,370 - pdf_analyzer - ERROR - [app.py:72] - OpenAI API key not found in environment variables
+2025-01-19 18:43:38,798 - pdf_analyzer - INFO - [app.py:307] - Starting PDF Analyzer application
+2025-01-19 18:43:40,860 - pdf_analyzer - INFO - [app.py:307] - Starting PDF Analyzer application
+2025-01-19 18:44:32,043 - pdf_analyzer - INFO - [app.py:221] - Accessed home page
+2025-01-19 18:44:34,339 - pdf_analyzer - ERROR - [app.py:303] - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1489, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1471, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/ctx.py", line 367, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/werkzeug/routing.py", line 2042, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-19 18:44:55,629 - pdf_analyzer - INFO - [app.py:307] - Starting PDF Analyzer application
+2025-01-19 18:44:56,832 - pdf_analyzer - INFO - [app.py:221] - Accessed home page
+2025-01-19 18:44:57,066 - pdf_analyzer - ERROR - [app.py:303] - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1489, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1471, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/flask/ctx.py", line 367, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/werkzeug/routing.py", line 2042, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-19 18:45:05,182 - pdf_analyzer - INFO - [app.py:226] - PDF analysis request received
+2025-01-19 18:45:05,186 - pdf_analyzer - INFO - [app.py:243] - Processing file: AWE_Working_Group_Research_Assistant_CL.pdf
+2025-01-19 18:45:05,187 - pdf_analyzer - DEBUG - [app.py:247] - File saved to: uploads/AWE_Working_Group_Research_Assistant_CL.pdf
+2025-01-19 18:45:05,193 - pdf_analyzer - INFO - [app.py:79] - Starting text extraction from PDF: uploads/AWE_Working_Group_Research_Assistant_CL.pdf
+2025-01-19 18:45:05,195 - pdf_analyzer - DEBUG - [app.py:85] - PDF has 1 pages
+2025-01-19 18:45:05,195 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 1/1
+2025-01-19 18:45:05,322 - pdf_analyzer - INFO - [app.py:91] - Successfully extracted 2623 characters from PDF
+2025-01-19 18:45:05,322 - pdf_analyzer - INFO - [app.py:195] - Starting text analysis
+2025-01-19 18:45:05,322 - pdf_analyzer - DEBUG - [app.py:196] - Text length: 2623 characters
+2025-01-19 18:45:08,905 - pdf_analyzer - INFO - [app.py:204] - Document size within limits, using standard processing
+2025-01-19 18:45:21,797 - pdf_analyzer - DEBUG - [app.py:267] - JSON analysis saved to: outputs/AWE_Working_Group_Research_Assistant_CL_analysis.json
+2025-01-19 18:45:21,798 - pdf_analyzer - DEBUG - [app.py:278] - Cleaned up uploaded file: uploads/AWE_Working_Group_Research_Assistant_CL.pdf
+2025-01-19 18:45:21,799 - pdf_analyzer - INFO - [app.py:280] - Successfully analyzed PDF: AWE_Working_Group_Research_Assistant_CL.pdf
+2025-01-19 18:46:21,756 - pdf_analyzer - INFO - [app.py:226] - PDF analysis request received
+2025-01-19 18:46:21,786 - pdf_analyzer - INFO - [app.py:243] - Processing file: Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 18:46:21,796 - pdf_analyzer - DEBUG - [app.py:247] - File saved to: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 18:46:21,821 - pdf_analyzer - INFO - [app.py:79] - Starting text extraction from PDF: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 18:46:21,906 - pdf_analyzer - DEBUG - [app.py:85] - PDF has 75 pages
+2025-01-19 18:46:21,906 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 1/75
+2025-01-19 18:46:22,037 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 2/75
+2025-01-19 18:46:22,160 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 3/75
+2025-01-19 18:46:22,242 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 4/75
+2025-01-19 18:46:22,351 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 5/75
+2025-01-19 18:46:22,419 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 6/75
+2025-01-19 18:46:22,543 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 7/75
+2025-01-19 18:46:22,611 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 8/75
+2025-01-19 18:46:22,703 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 9/75
+2025-01-19 18:46:22,794 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 10/75
+2025-01-19 18:46:22,908 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 11/75
+2025-01-19 18:46:23,041 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 12/75
+2025-01-19 18:46:23,149 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 13/75
+2025-01-19 18:46:23,250 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 14/75
+2025-01-19 18:46:23,353 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 15/75
+2025-01-19 18:46:23,431 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 16/75
+2025-01-19 18:46:23,517 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 17/75
+2025-01-19 18:46:23,657 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 18/75
+2025-01-19 18:46:23,738 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 19/75
+2025-01-19 18:46:23,863 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 20/75
+2025-01-19 18:46:24,068 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 21/75
+2025-01-19 18:46:24,170 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 22/75
+2025-01-19 18:46:24,314 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 23/75
+2025-01-19 18:46:24,436 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 24/75
+2025-01-19 18:46:24,546 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 25/75
+2025-01-19 18:46:24,657 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 26/75
+2025-01-19 18:46:24,778 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 27/75
+2025-01-19 18:46:24,919 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 28/75
+2025-01-19 18:46:25,024 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 29/75
+2025-01-19 18:46:25,136 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 30/75
+2025-01-19 18:46:25,245 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 31/75
+2025-01-19 18:46:25,383 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 32/75
+2025-01-19 18:46:25,447 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 33/75
+2025-01-19 18:46:25,558 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 34/75
+2025-01-19 18:46:25,671 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 35/75
+2025-01-19 18:46:25,778 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 36/75
+2025-01-19 18:46:25,885 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 37/75
+2025-01-19 18:46:26,027 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 38/75
+2025-01-19 18:46:26,105 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 39/75
+2025-01-19 18:46:26,186 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 40/75
+2025-01-19 18:46:26,252 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 41/75
+2025-01-19 18:46:26,345 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 42/75
+2025-01-19 18:46:26,472 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 43/75
+2025-01-19 18:46:26,564 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 44/75
+2025-01-19 18:46:26,654 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 45/75
+2025-01-19 18:46:26,751 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 46/75
+2025-01-19 18:46:26,838 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 47/75
+2025-01-19 18:46:27,129 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 48/75
+2025-01-19 18:46:27,231 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 49/75
+2025-01-19 18:46:27,322 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 50/75
+2025-01-19 18:46:27,408 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 51/75
+2025-01-19 18:46:27,506 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 52/75
+2025-01-19 18:46:27,632 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 53/75
+2025-01-19 18:46:27,718 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 54/75
+2025-01-19 18:46:27,808 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 55/75
+2025-01-19 18:46:27,907 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 56/75
+2025-01-19 18:46:28,045 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 57/75
+2025-01-19 18:46:28,276 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 58/75
+2025-01-19 18:46:28,380 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 59/75
+2025-01-19 18:46:28,554 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 60/75
+2025-01-19 18:46:28,676 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 61/75
+2025-01-19 18:46:28,764 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 62/75
+2025-01-19 18:46:28,903 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 63/75
+2025-01-19 18:46:28,995 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 64/75
+2025-01-19 18:46:29,092 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 65/75
+2025-01-19 18:46:29,193 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 66/75
+2025-01-19 18:46:29,287 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 67/75
+2025-01-19 18:46:29,401 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 68/75
+2025-01-19 18:46:29,496 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 69/75
+2025-01-19 18:46:29,583 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 70/75
+2025-01-19 18:46:29,678 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 71/75
+2025-01-19 18:46:29,749 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 72/75
+2025-01-19 18:46:29,839 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 73/75
+2025-01-19 18:46:29,943 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 74/75
+2025-01-19 18:46:30,034 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 75/75
+2025-01-19 18:46:30,093 - pdf_analyzer - INFO - [app.py:91] - Successfully extracted 162001 characters from PDF
+2025-01-19 18:46:30,093 - pdf_analyzer - INFO - [app.py:195] - Starting text analysis
+2025-01-19 18:46:30,093 - pdf_analyzer - DEBUG - [app.py:196] - Text length: 162001 characters
+2025-01-19 18:46:30,159 - pdf_analyzer - INFO - [app.py:201] - Large document detected, using RAG processing
+2025-01-19 18:46:30,159 - pdf_analyzer - INFO - [app.py:116] - Starting RAG processing
+2025-01-19 18:46:30,159 - pdf_analyzer - INFO - [app.py:104] - Splitting text into chunks
+2025-01-19 18:46:30,381 - pdf_analyzer - DEBUG - [app.py:111] - Created 20 chunks
+2025-01-19 18:46:33,646 - pdf_analyzer - ERROR - [app.py:137] - Error in RAG processing: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 123, in process_with_rag
+    vectorstore = FAISS.from_texts(chunks, embeddings)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/vectorstores/faiss.py", line 1043, in from_texts
+    embeddings = embedding.embed_documents(texts)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 497, in _get_len_safe_embeddings
+    response = embed_with_retry(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 120, in embed_with_retry
+    return embeddings.client.create(**kwargs)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/resources/embeddings.py", line 105, in create
+    return self._post(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-01-19 18:46:33,654 - pdf_analyzer - ERROR - [app.py:216] - Error in text analysis: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 202, in analyze_text_with_openai
+    return process_with_rag(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 123, in process_with_rag
+    vectorstore = FAISS.from_texts(chunks, embeddings)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/vectorstores/faiss.py", line 1043, in from_texts
+    embeddings = embedding.embed_documents(texts)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 497, in _get_len_safe_embeddings
+    response = embed_with_retry(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 120, in embed_with_retry
+    return embeddings.client.create(**kwargs)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/resources/embeddings.py", line 105, in create
+    return self._post(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-01-19 18:46:33,655 - pdf_analyzer - ERROR - [app.py:289] - Error processing PDF: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 260, in analyze_pdf
+    analysis_json = analyze_text_with_openai(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 202, in analyze_text_with_openai
+    return process_with_rag(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 123, in process_with_rag
+    vectorstore = FAISS.from_texts(chunks, embeddings)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/vectorstores/faiss.py", line 1043, in from_texts
+    embeddings = embedding.embed_documents(texts)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 671, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 497, in _get_len_safe_embeddings
+    response = embed_with_retry(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/langchain_community/embeddings/openai.py", line 120, in embed_with_retry
+    return embeddings.client.create(**kwargs)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/resources/embeddings.py", line 105, in create
+    return self._post(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 1055, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 834, in request
+    return self._request(
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/site-packages/openai/_base_client.py", line 877, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'Project `proj_8Fqcuhf68sJDUu2WtGC1Ycjl` does not have access to model `text-embedding-ada-002`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-01-19 18:46:33,655 - pdf_analyzer - DEBUG - [app.py:293] - Cleaned up uploaded file after error: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 19:01:29,130 - pdf_analyzer - INFO - [app.py:226] - PDF analysis request received
+2025-01-19 19:01:29,168 - pdf_analyzer - INFO - [app.py:243] - Processing file: Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 19:01:29,179 - pdf_analyzer - DEBUG - [app.py:247] - File saved to: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 19:01:29,202 - pdf_analyzer - INFO - [app.py:79] - Starting text extraction from PDF: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 19:01:29,265 - pdf_analyzer - DEBUG - [app.py:85] - PDF has 75 pages
+2025-01-19 19:01:29,266 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 1/75
+2025-01-19 19:01:29,366 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 2/75
+2025-01-19 19:01:29,599 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 3/75
+2025-01-19 19:01:29,680 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 4/75
+2025-01-19 19:01:29,788 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 5/75
+2025-01-19 19:01:29,877 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 6/75
+2025-01-19 19:01:29,973 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 7/75
+2025-01-19 19:01:30,076 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 8/75
+2025-01-19 19:01:30,167 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 9/75
+2025-01-19 19:01:30,261 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 10/75
+2025-01-19 19:01:30,373 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 11/75
+2025-01-19 19:01:30,477 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 12/75
+2025-01-19 19:01:30,617 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 13/75
+2025-01-19 19:01:30,716 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 14/75
+2025-01-19 19:01:30,820 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 15/75
+2025-01-19 19:01:30,894 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 16/75
+2025-01-19 19:01:30,978 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 17/75
+2025-01-19 19:01:31,082 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 18/75
+2025-01-19 19:01:31,193 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 19/75
+2025-01-19 19:01:31,296 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 20/75
+2025-01-19 19:01:31,404 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 21/75
+2025-01-19 19:01:31,501 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 22/75
+2025-01-19 19:01:31,599 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 23/75
+2025-01-19 19:01:31,738 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 24/75
+2025-01-19 19:01:31,839 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 25/75
+2025-01-19 19:01:31,945 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 26/75
+2025-01-19 19:01:32,058 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 27/75
+2025-01-19 19:01:32,168 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 28/75
+2025-01-19 19:01:32,302 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 29/75
+2025-01-19 19:01:32,409 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 30/75
+2025-01-19 19:01:32,515 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 31/75
+2025-01-19 19:01:32,617 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 32/75
+2025-01-19 19:01:32,680 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 33/75
+2025-01-19 19:01:32,816 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 34/75
+2025-01-19 19:01:32,924 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 35/75
+2025-01-19 19:01:33,030 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 36/75
+2025-01-19 19:01:33,135 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 37/75
+2025-01-19 19:01:33,235 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 38/75
+2025-01-19 19:01:33,341 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 39/75
+2025-01-19 19:01:33,418 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 40/75
+2025-01-19 19:01:33,483 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 41/75
+2025-01-19 19:01:33,573 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 42/75
+2025-01-19 19:01:33,668 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 43/75
+2025-01-19 19:01:33,789 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 44/75
+2025-01-19 19:01:33,878 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 45/75
+2025-01-19 19:01:33,976 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 46/75
+2025-01-19 19:01:34,064 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 47/75
+2025-01-19 19:01:34,160 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 48/75
+2025-01-19 19:01:34,275 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 49/75
+2025-01-19 19:01:34,363 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 50/75
+2025-01-19 19:01:34,452 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 51/75
+2025-01-19 19:01:34,543 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 52/75
+2025-01-19 19:01:34,641 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 53/75
+2025-01-19 19:01:34,731 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 54/75
+2025-01-19 19:01:34,848 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 55/75
+2025-01-19 19:01:34,940 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 56/75
+2025-01-19 19:01:35,035 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 57/75
+2025-01-19 19:01:35,133 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 58/75
+2025-01-19 19:01:35,217 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 59/75
+2025-01-19 19:01:35,331 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 60/75
+2025-01-19 19:01:35,433 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 61/75
+2025-01-19 19:01:35,524 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 62/75
+2025-01-19 19:01:35,632 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 63/75
+2025-01-19 19:01:35,750 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 64/75
+2025-01-19 19:01:35,842 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 65/75
+2025-01-19 19:01:35,942 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 66/75
+2025-01-19 19:01:36,036 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 67/75
+2025-01-19 19:01:36,119 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 68/75
+2025-01-19 19:01:36,256 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 69/75
+2025-01-19 19:01:36,346 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 70/75
+2025-01-19 19:01:36,442 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 71/75
+2025-01-19 19:01:36,515 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 72/75
+2025-01-19 19:01:36,606 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 73/75
+2025-01-19 19:01:36,681 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 74/75
+2025-01-19 19:01:36,802 - pdf_analyzer - DEBUG - [app.py:88] - Processing page 75/75
+2025-01-19 19:01:36,861 - pdf_analyzer - INFO - [app.py:91] - Successfully extracted 162001 characters from PDF
+2025-01-19 19:01:36,861 - pdf_analyzer - INFO - [app.py:195] - Starting text analysis
+2025-01-19 19:01:36,861 - pdf_analyzer - DEBUG - [app.py:196] - Text length: 162001 characters
+2025-01-19 19:01:36,933 - pdf_analyzer - INFO - [app.py:201] - Large document detected, using RAG processing
+2025-01-19 19:01:36,933 - pdf_analyzer - INFO - [app.py:116] - Starting RAG processing
+2025-01-19 19:01:36,934 - pdf_analyzer - INFO - [app.py:104] - Splitting text into chunks
+2025-01-19 19:01:37,353 - pdf_analyzer - DEBUG - [app.py:111] - Created 20 chunks
+2025-01-19 19:01:44,122 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 1/20
+2025-01-19 19:01:55,261 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 2/20
+2025-01-19 19:02:17,196 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 3/20
+2025-01-19 19:02:33,970 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 4/20
+2025-01-19 19:02:49,753 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 5/20
+2025-01-19 19:03:10,243 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 6/20
+2025-01-19 19:03:36,676 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 7/20
+2025-01-19 19:03:54,714 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 8/20
+2025-01-19 19:04:15,741 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 9/20
+2025-01-19 19:04:32,370 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 10/20
+2025-01-19 19:04:50,027 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 11/20
+2025-01-19 19:05:02,367 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 12/20
+2025-01-19 19:05:14,686 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 13/20
+2025-01-19 19:05:36,312 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 14/20
+2025-01-19 19:05:50,489 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 15/20
+2025-01-19 19:06:15,519 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 16/20
+2025-01-19 19:06:34,559 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 17/20
+2025-01-19 19:07:04,272 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 18/20
+2025-01-19 19:07:21,673 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 19/20
+2025-01-19 19:07:34,753 - pdf_analyzer - DEBUG - [app.py:128] - Processing chunk 20/20
+2025-01-19 19:07:47,024 - pdf_analyzer - INFO - [app.py:159] - Combining chunk analyses
+2025-01-19 19:08:46,666 - pdf_analyzer - ERROR - [app.py:190] - Error combining analyses: Expecting value: line 3 column 4451 (char 7632)
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 188, in combine_analyses
+    return json.loads(response.choices[0].message.content)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 4451 (char 7632)
+2025-01-19 19:08:46,676 - pdf_analyzer - ERROR - [app.py:137] - Error in RAG processing: Expecting value: line 3 column 4451 (char 7632)
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 133, in process_with_rag
+    combined_analysis = combine_analyses(all_analyses)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 188, in combine_analyses
+    return json.loads(response.choices[0].message.content)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 4451 (char 7632)
+2025-01-19 19:08:46,677 - pdf_analyzer - ERROR - [app.py:216] - Error in text analysis: Expecting value: line 3 column 4451 (char 7632)
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 202, in analyze_text_with_openai
+    return process_with_rag(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 133, in process_with_rag
+    combined_analysis = combine_analyses(all_analyses)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 188, in combine_analyses
+    return json.loads(response.choices[0].message.content)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 4451 (char 7632)
+2025-01-19 19:08:46,677 - pdf_analyzer - ERROR - [app.py:289] - Error processing PDF: Expecting value: line 3 column 4451 (char 7632)
+Traceback (most recent call last):
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 260, in analyze_pdf
+    analysis_json = analyze_text_with_openai(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 202, in analyze_text_with_openai
+    return process_with_rag(text)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 133, in process_with_rag
+    combined_analysis = combine_analyses(all_analyses)
+  File "/Users/looremeta/My_Projects/ai_agents/ai-pdf-analysis/app.py", line 188, in combine_analyses
+    return json.loads(response.choices[0].message.content)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/looremeta/opt/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 4451 (char 7632)
+2025-01-19 19:08:46,679 - pdf_analyzer - DEBUG - [app.py:293] - Cleaned up uploaded file after error: uploads/Kenya_National_AI_Strategy_Draft_for_Public_Validation_14-01-2025.pdf
+2025-01-19 19:14:39,349 - pdf_analyzer - INFO - [app.py:307] - Starting PDF Analyzer application
+2025-01-19 19:15:23,560 - pdf_analyzer - INFO - [app.py:307] - Starting PDF Analyzer application
