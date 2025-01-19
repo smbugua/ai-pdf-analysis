@@ -9,6 +9,10 @@ import magic
 import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import FAISS
+from langchain_community.embeddings.openai import OpenAIEmbeddings
+import tiktoken
 
 # Load environment variables
 load_dotenv()
@@ -90,24 +94,126 @@ def extract_text_from_pdf(pdf_path):
         logger.error(f"Error extracting text from PDF: {str(e)}", exc_info=True)
         raise
 
-def analyze_text_with_openai(text):
-    logger.info("Starting OpenAI analysis")
-    logger.debug(f"Analyzing text of length: {len(text)} characters")
-    
+def count_tokens(text):
+    """Count the number of tokens in a text string."""
+    encoding = tiktoken.encoding_for_model("gpt-4")
+    return len(encoding.encode(text))
+
+def create_text_chunks(text):
+    """Split text into chunks using LangChain's text splitter."""
+    logger.info("Splitting text into chunks")
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=2000,
+        chunk_overlap=200,
+        length_function=count_tokens,
+    )
+    chunks = text_splitter.split_text(text)
+    logger.debug(f"Created {len(chunks)} chunks")
+    return chunks
+
+def process_with_rag(text):
+    """Process large documents using RAG approach."""
+    logger.info("Starting RAG processing")
+    try:
+        # Create chunks
+        chunks = create_text_chunks(text)
+        
+        # Create embeddings and vector store
+        embeddings = OpenAIEmbeddings()
+        vectorstore = FAISS.from_texts(chunks, embeddings)
+        
+        # Process chunks and aggregate results
+        all_analyses = []
+        for i, chunk in enumerate(chunks):
+            logger.debug(f"Processing chunk {i+1}/{len(chunks)}")
+            chunk_analysis = analyze_chunk_with_openai(chunk)
+            all_analyses.append(json.loads(chunk_analysis))
+        
+        # Combine analyses
+        combined_analysis = combine_analyses(all_analyses)
+        logger.info("Successfully completed RAG processing")
+        return json.dumps(combined_analysis)
+    except Exception as e:
+        logger.error(f"Error in RAG processing: {str(e)}", exc_info=True)
+        raise
+
+def analyze_chunk_with_openai(text):
+    """Analyze a single chunk with OpenAI."""
     try:
         response = openai.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that analyzes documents and provides detailed summaries in a structured format."},
-                {"role": "user", "content": f"Please analyze this text and provide a detailed summary including main topics, key points, and important details. Format the response as JSON with appropriate keys and values: {text}"}
+                {"role": "system", "content": "You are a helpful assistant that analyzes document chunks and provides detailed summaries in a structured format."},
+                {"role": "user", "content": f"Please analyze this text chunk and provide a detailed summary including main topics, key points, and important details. Format the response as JSON with keys: 'main_topics', 'key_points', 'details': {text}"}
             ],
             temperature=0.7,
             max_tokens=1000
         )
-        logger.info("Successfully received OpenAI analysis")
         return response.choices[0].message.content
     except Exception as e:
-        logger.error(f"Error in OpenAI analysis: {str(e)}", exc_info=True)
+        logger.error(f"Error in chunk analysis: {str(e)}", exc_info=True)
+        raise
+
+def combine_analyses(analyses):
+    """Combine multiple chunk analyses into a single coherent analysis."""
+    logger.info("Combining chunk analyses")
+    try:
+        # Prepare combined data
+        all_topics = []
+        all_key_points = []
+        all_details = []
+        
+        for analysis in analyses:
+            all_topics.extend(analysis.get('main_topics', []))
+            all_key_points.extend(analysis.get('key_points', []))
+            all_details.extend(analysis.get('details', []))
+        
+        # Use OpenAI to synthesize the combined information
+        synthesis_prompt = {
+            "topics": all_topics,
+            "key_points": all_key_points,
+            "details": all_details
+        }
+        
+        response = openai.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that synthesizes multiple document analyses into a coherent summary."},
+                {"role": "user", "content": f"Please synthesize these analyses into a single coherent summary. Remove duplicates and organize the information logically. Format the response as JSON with keys 'main_topics', 'key_points', 'details', and 'executive_summary': {json.dumps(synthesis_prompt)}"}
+            ],
+            temperature=0.7,
+            max_tokens=1500
+        )
+        
+        return json.loads(response.choices[0].message.content)
+    except Exception as e:
+        logger.error(f"Error combining analyses: {str(e)}", exc_info=True)
+        raise
+
+# Modify the analyze_text_with_openai function to handle large documents
+def analyze_text_with_openai(text):
+    logger.info("Starting text analysis")
+    logger.debug(f"Text length: {len(text)} characters")
+    
+    try:
+        # Check if text is too large (e.g., more than 4000 tokens)
+        if count_tokens(text) > 4000:
+            logger.info("Large document detected, using RAG processing")
+            return process_with_rag(text)
+        else:
+            logger.info("Document size within limits, using standard processing")
+            response = openai.chat.completions.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant that analyzes documents and provides detailed summaries in a structured format."},
+                    {"role": "user", "content": f"Please analyze this text and provide a detailed summary including main topics, key points, and important details. Format the response as JSON with appropriate keys and values: {text}"}
+                ],
+                temperature=0.7,
+                max_tokens=1000
+            )
+            return response.choices[0].message.content
+    except Exception as e:
+        logger.error(f"Error in text analysis: {str(e)}", exc_info=True)
         raise
 
 @app.route('/', methods=['GET'])
