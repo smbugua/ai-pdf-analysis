@@ -1,6 +1,5 @@
 .env
 outputs/
-logs/
-
+logs
 logs/pdf_analyzer.log
 logs/*.log
