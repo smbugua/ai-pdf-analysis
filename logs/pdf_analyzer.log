@@ -1,0 +1,183 @@
+2025-01-19 16:58:26,225 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 16:59:02,724 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 16:59:03,648 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 16:59:06,797 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 16:59:36,449 - pdf_analyzer - INFO - [app.py:120] - PDF analysis request received
+2025-01-19 16:59:36,470 - pdf_analyzer - INFO - [app.py:137] - Processing file: kenya_ai.pdf
+2025-01-19 16:59:36,478 - pdf_analyzer - DEBUG - [app.py:141] - File saved to: uploads/kenya_ai.pdf
+2025-01-19 16:59:36,490 - pdf_analyzer - INFO - [app.py:75] - Starting text extraction from PDF: uploads/kenya_ai.pdf
+2025-01-19 16:59:36,532 - pdf_analyzer - DEBUG - [app.py:81] - PDF has 75 pages
+2025-01-19 16:59:36,532 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 1/75
+2025-01-19 16:59:36,589 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 2/75
+2025-01-19 16:59:36,817 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 3/75
+2025-01-19 16:59:36,956 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 4/75
+2025-01-19 16:59:37,039 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 5/75
+2025-01-19 16:59:37,090 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 6/75
+2025-01-19 16:59:37,159 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 7/75
+2025-01-19 16:59:37,211 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 8/75
+2025-01-19 16:59:37,295 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 9/75
+2025-01-19 16:59:37,386 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 10/75
+2025-01-19 16:59:37,580 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 11/75
+2025-01-19 16:59:37,745 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 12/75
+2025-01-19 16:59:37,897 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 13/75
+2025-01-19 16:59:38,037 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 14/75
+2025-01-19 16:59:38,156 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 15/75
+2025-01-19 16:59:38,232 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 16/75
+2025-01-19 16:59:38,309 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 17/75
+2025-01-19 16:59:38,388 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 18/75
+2025-01-19 16:59:38,469 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 19/75
+2025-01-19 16:59:38,629 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 20/75
+2025-01-19 16:59:38,724 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 21/75
+2025-01-19 16:59:38,803 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 22/75
+2025-01-19 16:59:38,941 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 23/75
+2025-01-19 16:59:39,179 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 24/75
+2025-01-19 16:59:39,369 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 25/75
+2025-01-19 16:59:39,507 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 26/75
+2025-01-19 16:59:39,664 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 27/75
+2025-01-19 16:59:39,819 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 28/75
+2025-01-19 16:59:40,033 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 29/75
+2025-01-19 16:59:40,161 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 30/75
+2025-01-19 16:59:40,338 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 31/75
+2025-01-19 16:59:40,430 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 32/75
+2025-01-19 16:59:40,524 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 33/75
+2025-01-19 16:59:40,798 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 34/75
+2025-01-19 16:59:40,933 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 35/75
+2025-01-19 16:59:41,021 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 36/75
+2025-01-19 16:59:41,119 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 37/75
+2025-01-19 16:59:41,221 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 38/75
+2025-01-19 16:59:41,331 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 39/75
+2025-01-19 16:59:41,393 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 40/75
+2025-01-19 16:59:41,450 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 41/75
+2025-01-19 16:59:41,525 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 42/75
+2025-01-19 16:59:41,606 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 43/75
+2025-01-19 16:59:41,678 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 44/75
+2025-01-19 16:59:41,766 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 45/75
+2025-01-19 16:59:41,842 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 46/75
+2025-01-19 16:59:41,910 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 47/75
+2025-01-19 16:59:41,990 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 48/75
+2025-01-19 16:59:42,054 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 49/75
+2025-01-19 16:59:42,138 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 50/75
+2025-01-19 16:59:42,200 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 51/75
+2025-01-19 16:59:42,268 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 52/75
+2025-01-19 16:59:42,335 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 53/75
+2025-01-19 16:59:42,396 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 54/75
+2025-01-19 16:59:42,483 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 55/75
+2025-01-19 16:59:42,554 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 56/75
+2025-01-19 16:59:42,620 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 57/75
+2025-01-19 16:59:42,692 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 58/75
+2025-01-19 16:59:42,750 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 59/75
+2025-01-19 16:59:42,835 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 60/75
+2025-01-19 16:59:42,912 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 61/75
+2025-01-19 16:59:42,973 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 62/75
+2025-01-19 16:59:43,050 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 63/75
+2025-01-19 16:59:43,111 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 64/75
+2025-01-19 16:59:43,571 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 65/75
+2025-01-19 16:59:43,690 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 66/75
+2025-01-19 16:59:43,767 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 67/75
+2025-01-19 16:59:43,898 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 68/75
+2025-01-19 16:59:44,007 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 69/75
+2025-01-19 16:59:44,120 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 70/75
+2025-01-19 16:59:44,205 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 71/75
+2025-01-19 16:59:44,267 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 72/75
+2025-01-19 16:59:44,342 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 73/75
+2025-01-19 16:59:44,405 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 74/75
+2025-01-19 16:59:44,586 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 75/75
+2025-01-19 16:59:45,061 - pdf_analyzer - INFO - [app.py:87] - Successfully extracted 162001 characters from PDF
+2025-01-19 16:59:45,063 - pdf_analyzer - INFO - [app.py:94] - Starting OpenAI analysis
+2025-01-19 16:59:45,066 - pdf_analyzer - DEBUG - [app.py:95] - Analyzing text of length: 162001 characters
+2025-01-19 16:59:47,015 - pdf_analyzer - ERROR - [app.py:110] - Error in OpenAI analysis: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 31716 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/admin/agentic/pdf-synth/app.py", line 98, in analyze_text_with_openai
+    response = openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 859, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1283, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 960, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1064, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 31716 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-01-19 16:59:47,024 - pdf_analyzer - ERROR - [app.py:183] - Error processing PDF: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 31716 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/admin/agentic/pdf-synth/app.py", line 154, in analyze_pdf
+    analysis_json = analyze_text_with_openai(text)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/agentic/pdf-synth/app.py", line 98, in analyze_text_with_openai
+    response = openai.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 859, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1283, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 960, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1064, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 31716 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-01-19 16:59:47,025 - pdf_analyzer - DEBUG - [app.py:187] - Cleaned up uploaded file after error: uploads/kenya_ai.pdf
+2025-01-19 17:04:10,015 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:06:40,034 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:06:43,482 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:09,808 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:12,016 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:12,699 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:14,231 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:43,428 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 17:07:44,183 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 17:07:47,252 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:49,232 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:49,808 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:07:50,208 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:09:22,831 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:10:58,398 - pdf_analyzer - INFO - [app.py:115] - Accessed home page
+2025-01-19 17:11:46,403 - pdf_analyzer - INFO - [app.py:120] - PDF analysis request received
+2025-01-19 17:11:46,407 - pdf_analyzer - INFO - [app.py:137] - Processing file: Mapsiot_Contract_.pdf
+2025-01-19 17:11:46,408 - pdf_analyzer - DEBUG - [app.py:141] - File saved to: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:11:46,410 - pdf_analyzer - INFO - [app.py:75] - Starting text extraction from PDF: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:11:46,414 - pdf_analyzer - DEBUG - [app.py:81] - PDF has 3 pages
+2025-01-19 17:11:46,414 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 1/3
+2025-01-19 17:11:46,484 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 2/3
+2025-01-19 17:11:46,570 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 3/3
+2025-01-19 17:11:46,654 - pdf_analyzer - INFO - [app.py:87] - Successfully extracted 8873 characters from PDF
+2025-01-19 17:11:46,654 - pdf_analyzer - INFO - [app.py:94] - Starting OpenAI analysis
+2025-01-19 17:11:46,654 - pdf_analyzer - DEBUG - [app.py:95] - Analyzing text of length: 8873 characters
+2025-01-19 17:12:00,397 - pdf_analyzer - INFO - [app.py:107] - Successfully received OpenAI analysis
+2025-01-19 17:12:00,398 - pdf_analyzer - DEBUG - [app.py:161] - JSON analysis saved to: outputs/Mapsiot_Contract__analysis.json
+2025-01-19 17:12:00,398 - pdf_analyzer - ERROR - [app.py:183] - Error processing PDF: 'summary'
+Traceback (most recent call last):
+  File "/Users/admin/agentic/pdf-synth/app.py", line 167, in analyze_pdf
+    f.write(json.loads(analysis_json)['summary'])
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'summary'
+2025-01-19 17:12:00,399 - pdf_analyzer - DEBUG - [app.py:187] - Cleaned up uploaded file after error: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:12:44,586 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 17:12:58,811 - pdf_analyzer - INFO - [app.py:201] - Starting PDF Analyzer application
+2025-01-19 17:13:18,429 - pdf_analyzer - INFO - [app.py:120] - PDF analysis request received
+2025-01-19 17:13:18,433 - pdf_analyzer - INFO - [app.py:137] - Processing file: Mapsiot_Contract_.pdf
+2025-01-19 17:13:18,433 - pdf_analyzer - DEBUG - [app.py:141] - File saved to: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:13:18,437 - pdf_analyzer - INFO - [app.py:75] - Starting text extraction from PDF: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:13:18,439 - pdf_analyzer - DEBUG - [app.py:81] - PDF has 3 pages
+2025-01-19 17:13:18,439 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 1/3
+2025-01-19 17:13:18,494 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 2/3
+2025-01-19 17:13:18,551 - pdf_analyzer - DEBUG - [app.py:84] - Processing page 3/3
+2025-01-19 17:13:18,597 - pdf_analyzer - INFO - [app.py:87] - Successfully extracted 8873 characters from PDF
+2025-01-19 17:13:18,597 - pdf_analyzer - INFO - [app.py:94] - Starting OpenAI analysis
+2025-01-19 17:13:18,599 - pdf_analyzer - DEBUG - [app.py:95] - Analyzing text of length: 8873 characters
+2025-01-19 17:13:38,395 - pdf_analyzer - INFO - [app.py:107] - Successfully received OpenAI analysis
+2025-01-19 17:13:38,396 - pdf_analyzer - DEBUG - [app.py:161] - JSON analysis saved to: outputs/Mapsiot_Contract__analysis.json
+2025-01-19 17:13:38,396 - pdf_analyzer - DEBUG - [app.py:172] - Cleaned up uploaded file: uploads/Mapsiot_Contract_.pdf
+2025-01-19 17:13:38,396 - pdf_analyzer - INFO - [app.py:174] - Successfully analyzed PDF: Mapsiot_Contract_.pdf

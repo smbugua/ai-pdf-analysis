@@ -1,0 +1,262 @@
+/* Base styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+/* Navigation styling */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Container and layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1) !important;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+/* Upload area styling */
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #0d6efd;
+    background-color: #f1f4f9;
+}
+
+/* Analysis output styling */
+.analysis-output {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    font-family: monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    max-height: 500px;
+}
+
+/* Loading and progress indicators */
+#loading {
+    margin: 2rem 0;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Button styling */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-group .btn {
+    margin: 0 5px;
+}
+
+/* Footer styling */
+.footer {
+    margin-top: auto;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Progress bar styling */
+.progress {
+    height: 25px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+/* Log console styling */
+.log-console {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-family: 'Consolas', monospace;
+}
+
+.log-header {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 8px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+}
+
+.log-content {
+    color: #00ff00;
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.log-entry {
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Custom scrollbars */
+.analysis-output::-webkit-scrollbar,
+.log-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.analysis-output::-webkit-scrollbar-track,
+.log-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.analysis-output::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.analysis-output::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.log-content::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.log-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.log-content::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Dropdown menu animations */
+.dropdown-menu {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress bar animations */
+@keyframes progress-bar-stripes {
+    0% { background-position-x: 1rem; }
+}
+
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, 0.15) 50%, 
+        rgba(255, 255, 255, 0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 1rem 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin: 5px 0;
+    }
+    
+    .progress {
+        height: 20px;
+    }
+    
+    .progress-bar {
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+    
+    .log-content {
+        max-height: 150px;
+    }
+}
+
+/* Dark mode support for log console */
+@media (prefers-color-scheme: dark) {
+    .log-console {
+        border: 1px solid #333;
+    }
+    
+    .log-header {
+        background-color: #1a1a1a;
+    }
+    
+    .log-content {
+        background-color: #1e1e1e;
+    }
+}
