@@ -157,10 +157,7 @@ To contribute to this project:
 - Additional export formats
 - Team collaboration features
 
-## License
-
-[Add your chosen license here]
 
 ---
 
-**Note**: This application requires an active OpenAI API key and may i
+**Note**: This application requires an active OpenAI API key 
