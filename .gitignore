@@ -3,3 +3,4 @@ outputs/
 logs
 logs/pdf_analyzer.log
 logs/*.log
+uploads
