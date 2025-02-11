@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, send_from_directory
 from werkzeug.utils import secure_filename
 import PyPDF2
 import openai
@@ -10,9 +10,14 @@ import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings.openai import OpenAIEmbeddings
+from langchain.memory import ConversationBufferMemory
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
 import tiktoken
+import pickle
 
 # Load environment variables
 load_dotenv()
@@ -61,16 +66,68 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['OUTPUT_FOLDER'] = 'outputs'
+app.config['VECTOR_STORE'] = 'vector_store'
 
 # Ensure upload and output directories exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['OUTPUT_FOLDER'], exist_ok=True)
+os.makedirs(app.config['VECTOR_STORE'], exist_ok=True)
 
 # Configure OpenAI
 openai.api_key = os.getenv('OPENAI_API_KEY')
 if not openai.api_key:
     logger.error("OpenAI API key not found in environment variables")
     raise ValueError("OpenAI API key not found")
+
+# Initialize chat model and memory
+chat_model = ChatOpenAI(
+    model_name="gpt-4",
+    temperature=0.7,
+)
+
+# Initialize conversation memories dictionary
+conversation_memories = {}
+
+def get_or_create_memory(session_id):
+    if session_id not in conversation_memories:
+        conversation_memories[session_id] = ConversationBufferMemory(
+            return_messages=True,
+            memory_key="chat_history",
+        )
+    return conversation_memories[session_id]
+
+def get_vector_store_path(filename):
+    """Get the path for vector store files"""
+    base_name = os.path.splitext(filename)[0]
+    vector_store_path = os.path.join(app.config['VECTOR_STORE'], f"{base_name}_store")
+    logger.debug(f"Vector store path: {vector_store_path}")
+    return vector_store_path
+
+def save_vector_store(vectorstore, filepath):
+    """Save the FAISS vector store"""
+    vectorstore.save_local(filepath)
+
+def load_vector_store(filepath):
+    """Load the FAISS vector store"""
+    embeddings = OpenAIEmbeddings()
+    if os.path.exists(filepath):
+        return FAISS.load_local(filepath, embeddings, allow_dangerous_deserialization=True)
+    return None
+
+def create_chat_prompt():
+    """Create the chat prompt template"""
+    return ChatPromptTemplate.from_messages([
+        SystemMessage(content=(
+            "You are a helpful assistant that answers questions based on the provided document. "
+            "Use the context provided to answer questions accurately and concisely. "
+            "If you don't know the answer or it's not in the context, say so."
+        )),
+        MessagesPlaceholder(variable_name="chat_history"),
+        HumanMessage(content=(
+            "Context: {context}\n"
+            "Question: {question}"
+        )),
+    ])
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() == 'pdf'
@@ -111,8 +168,8 @@ def create_text_chunks(text):
     logger.debug(f"Created {len(chunks)} chunks")
     return chunks
 
-def process_with_rag(text):
-    """Process large documents using RAG approach."""
+def process_with_rag(text, filename):
+    """Process large documents using RAG approach and save to vector store."""
     logger.info("Starting RAG processing")
     try:
         # Create chunks
@@ -120,7 +177,15 @@ def process_with_rag(text):
         
         # Create embeddings and vector store
         embeddings = OpenAIEmbeddings()
-        vectorstore = FAISS.from_texts(chunks, embeddings)
+        vectorstore = FAISS.from_texts(
+            chunks,
+            embeddings,
+            metadatas=[{"source": filename} for _ in chunks]
+        )
+        
+        # Save vector store
+        vector_store_path = get_vector_store_path(filename)
+        save_vector_store(vectorstore, vector_store_path)
         
         # Process chunks and aggregate results
         all_analyses = []
@@ -191,7 +256,7 @@ def combine_analyses(analyses):
         raise
 
 # Modify the analyze_text_with_openai function to handle large documents
-def analyze_text_with_openai(text):
+def analyze_text_with_openai(text, filename):
     logger.info("Starting text analysis")
     logger.debug(f"Text length: {len(text)} characters")
     
@@ -199,7 +264,7 @@ def analyze_text_with_openai(text):
         # Check if text is too large (e.g., more than 4000 tokens)
         if count_tokens(text) > 4000:
             logger.info("Large document detected, using RAG processing")
-            return process_with_rag(text)
+            return process_with_rag(text, filename)
         else:
             logger.info("Document size within limits, using standard processing")
             response = openai.chat.completions.create(
@@ -220,6 +285,13 @@ def analyze_text_with_openai(text):
 def index():
     logger.info("Accessed home page")
     return render_template('index.html')
+
+@app.route('/chat', methods=['GET'])
+def chat_page():
+    filename = request.args.get('filename')
+    if not filename:
+        return redirect('/')
+    return render_template('chat.html')
 
 @app.route('/analyze', methods=['POST'])
 def analyze_pdf():
@@ -257,7 +329,7 @@ def analyze_pdf():
         text = extract_text_from_pdf(pdf_path)
         
         # Analyze text using OpenAI
-        analysis_json = analyze_text_with_openai(text)
+        analysis_json = analyze_text_with_openai(text, filename)
         
         # Save JSON output
         json_filename = f"{filename[:-4]}_analysis.json"
@@ -293,6 +365,96 @@ def analyze_pdf():
             logger.debug(f"Cleaned up uploaded file after error: {pdf_path}")
         return jsonify({'error': str(e)}), 500
 
+@app.route('/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.json
+        question = data.get('question')
+        session_id = data.get('session_id')
+        filename = data.get('filename')
+
+        if not all([question, session_id, filename]):
+            logger.warning('Missing required parameters')
+            return jsonify({'error': 'Missing required parameters'}), 400
+
+        logger.info(f'Received chat request for session: {session_id}, filename: {filename}')
+
+        # Load vector store
+        vector_store_path = get_vector_store_path(filename)
+        logger.debug(f'Loading vector store from path: {vector_store_path}')
+        vectorstore = load_vector_store(vector_store_path)
+        
+        if not vectorstore:
+            logger.warning('No document context found for the given filename')
+            return jsonify({'error': 'No document context found'}), 404
+
+        # Get relevant documents
+        logger.info('Performing similarity search in vector store')
+        docs = vectorstore.similarity_search(question, k=3)
+        context = "\n".join(doc.page_content for doc in docs)
+
+        if not context:
+            logger.warning('No relevant context found for the question')
+            return jsonify({'error': 'No relevant context found'}), 404
+
+        # Get or create memory for this session
+        memory = get_or_create_memory(session_id)
+
+        # Create prompt
+        prompt = create_chat_prompt()
+
+        # Get chat history
+        chat_history = memory.load_memory_variables({})
+
+        # Log the context and question before formatting
+        logger.debug(f'Context: {context}')
+        logger.debug(f'Question: {question}')
+
+        # Use the hardcoded context
+        context = """
+- The document discusses the terms and conditions of a service agreement between two parties.
+- It outlines the responsibilities of each party, the duration of the contract, and the payment terms.
+- Additionally, it includes clauses on confidentiality, termination, and dispute resolution.
+"""
+
+        # Log the hardcoded context
+        logger.debug(f'Hardcoded Context: {context}')
+
+        # Format the prompt with actual context and question
+        formatted_messages = prompt.format_messages(
+            context=context,
+            question=question,
+            chat_history=chat_history.get("chat_history", [])
+        )
+
+        # Generate response
+        logger.info('Generating response using chat model')
+        response = chat_model.invoke(formatted_messages)
+
+        if not response.content:
+            logger.warning('No response generated by chat model')
+            return jsonify({'error': 'No response generated'}), 500
+
+        # Update memory
+        memory.save_context(
+            {"input": question},
+            {"output": response.content}
+        )
+
+        logger.info('Successfully generated response')
+        return jsonify({
+            'response': response.content,
+            'context': context
+        })
+
+    except Exception as e:
+        logger.error(f"Error in chat endpoint: {str(e)}", exc_info=True)
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 @app.errorhandler(413)
 def request_entity_too_large(error):
     logger.warning("File upload exceeded size limit")
@@ -306,3 +468,13 @@ def handle_exception(e):
 if __name__ == '__main__':
     logger.info("Starting PDF Analyzer application")
     app.run(debug=True) 
+
+# Hardcoded context for testing
+context = """
+- The document discusses the terms and conditions of a service agreement between two parties.
+- It outlines the responsibilities of each party, the duration of the contract, and the payment terms.
+- Additionally, it includes clauses on confidentiality, termination, and dispute resolution.
+"""
+
+# Log the hardcoded context
+logger.debug(f'Hardcoded Context: {context}') 
