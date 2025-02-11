@@ -5,5 +5,3 @@ logs/pdf_analyzer.log
 logs/*.log
 uploads
 vector_store
-vector_store/
-vector_store/*
